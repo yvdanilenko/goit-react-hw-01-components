@@ -1,8 +1,9 @@
 import propTypes from "prop-types";
+import { FriendsList } from "./FriendsList.styled";
 
 export default function FriendList({ friends }) {
   return (
-    <ul>
+    <FriendsList>
       {friends.map((friend) => (
         <li className="item" key={friend.id}>
           <span className="status">{friend.isOnline}</span>
@@ -15,7 +16,7 @@ export default function FriendList({ friends }) {
           <p className="name">{friend.name}</p>
         </li>
       ))}
-    </ul>
+    </FriendsList>
   );
 }
 

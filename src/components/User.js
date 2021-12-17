@@ -1,4 +1,6 @@
 import propTypes from "prop-types";
+import { Stats } from "./User.styled";
+import { Name } from "./User.styled";
 
 export default function Profile({
   avatar,
@@ -13,12 +15,12 @@ export default function Profile({
     <div className="profile">
       <div className="description">
         <img src={avatar} alt={username} className="avatar" width="280" />
-        <p className="name">{username}</p>
+        <Name>{username}</Name>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
       </div>
 
-      <ul className="stats">
+      <Stats>
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{followers}</span>
@@ -31,7 +33,7 @@ export default function Profile({
           <span className="label">Likes</span>
           <span className="quantity">{likes}</span>
         </li>
-      </ul>
+      </Stats>
     </div>
   );
 }

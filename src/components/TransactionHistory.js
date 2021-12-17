@@ -1,6 +1,8 @@
+import { TransactionTable } from "./TransactionHistory.styled";
+
 export default function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
+    <TransactionTable>
       <thead>
         <tr>
           <th>Type</th>
@@ -18,6 +20,6 @@ export default function TransactionHistory({ items }) {
           </tr>
         ))}
       </tbody>
-    </table>
+    </TransactionTable>
   );
 }

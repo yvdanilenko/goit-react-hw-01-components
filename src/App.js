@@ -7,10 +7,11 @@ import Statistics from "./components/Statistics";
 import dataStatistics from "./data/dataStatistics.json";
 import TransactionHistory from "./components/TransactionHistory";
 import transactions from "./data/transactions.json";
+import { Container } from "./components/App/App.styled";
 
 function App() {
   return (
-    <div>
+    <Container>
       <Profile
         avatar={data.avatar}
         username={data.username}
@@ -24,7 +25,7 @@ function App() {
       <FriendList friends={friendList} />
       <Statistics title="Upload stats" stats={dataStatistics} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 }
 
